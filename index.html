@@ -16,21 +16,13 @@
 
             <div id="ggbApplet"></div>
             <div class="kuis" style="width: 25vw;">
-            <p>Pada segitiga disamping hitunglah 3 sudut yang terbentuk oleh segitia tersebut, anda dapat menggeser segitiga untuk memudahkan pembuatan sudut.</p>
+            <p>Pada segitiga ABC disamping hitunglah sudut yang terbentuk oleh segitia tersebut, anda dapat menggeser segitiga sehingga titik A berada di titik tengah kemudian geser titik A atau B pada busur untuk menghitung sudut yang terbentuk.</p>
             <div>
-                <label for="soal1">Sudut ABC</label>
-            <input type="text" name="soal1" id="soal1">
+                <label for="soal1">Sudut yang terbentuk</label>
+            <input type="text" name="soal1" id="soal1"> 
             </div>
+            <span id="respon"> </span>
             
-            <div>
-                <label for="soal2">Sudut BCA</label>
-                <input type="text" name="soal2" id="soal2">
-            </div>
-            
-            <div>
-                <label for="soal3">Sudut CAB</label>
-                <input type="text" name="soal3" id="soal3">
-            </div>
             <div>
                 <button id="cek">Cek jawaban</button>
             </div>
@@ -43,28 +35,17 @@
             let btn_cek = document.getElementById("cek");
             btn_cek.addEventListener("click", ()=>{
                 soal1 = document.getElementById("soal1");
-                soal2 = document.getElementById("soal2");
-                soal3 = document.getElementById("soal3");
-                if(soal1.value == "27"){
-                    soal1.style.color = "green";
+                if(soal1.value == "57" || soal1.value == "58" || soal1.value == "59" ){
+                    let respon = document.getElementById("respon");
+                    respon.innerText = "Jawaban anda benar";
+                    respon.style.color = "green";
+                    
                 }else{
-                    soal1.style.color = "red";
+                    respon.innerText = "Jawaban anda salah";
+                    respon.style.color = "red";
 
                 }
 
-                if(soal2.value == "94"){
-                    soal2.style.color = "green";
-                }else{
-                    soal2.style.color = "red";
-
-                }
-
-                if(soal3.value == "58"){
-                    soal3.style.color = "green";
-                }else{
-                    soal3.style.color = "red";
-
-                }
             })
     </script>
 <script>
